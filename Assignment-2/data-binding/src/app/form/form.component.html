@@ -1,0 +1,13 @@
+<div class="m-2 p-3">
+  <div class="form-group">
+    <label for="username">Username :</label>
+    <input type="text" class="form-control" id="username" aria-describedby="username" [(ngModel)]="userName">
+  </div>
+
+  <button
+    [disabled]="!userName"
+    class="btn btn-primary"
+    (click)="userName = ''">Reset</button>
+</div>
+
+<p class="m-2 p-3"><span class="font-weight-bold">Your username : </span> {{ userName }}</p>
